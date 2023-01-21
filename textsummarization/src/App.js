@@ -9,21 +9,21 @@ function App() {
 
   const configuration = new Configuration({
     // apiKey: process.env.OPENAI_API_KEY,
-    apiKey: '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'
+    apiKey: 'apikey'
   });
   const openai = new OpenAIApi(configuration);
 
 
-  console.log(openai, 'apenaiii')
+  // console.log(openai, 'apenaiii')
 
   const HandleSubmit = (e) => {
     e.preventDefault()
-    console.log(text)
+    // console.log(text)
     console.log(openai.createCompletion({
       model: 'text-davinci-003',
       prompt: generatePrompt(text),
       temperature: 0.6,
-      max_tokens: 2048,
+      max_tokens: 100,
     }).then((res) => {
       console.log(res, 'res')
     })
