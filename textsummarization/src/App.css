@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -32,7 +32,61 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+} */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.App_ {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 70%;
+  background: #61dafb;
+  height: auto;
+}
+
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+
+}
+
+
+.text_form {
+  /* margin-top: 20px; */
+}
+
+
+textarea {
+  width: 100%;
+  /* margin-top: 100px; */
+}
+
+#root {
+  background: #61dafb;
+  /* height: 100vh; */
+}
+
+.summarized_text {
+  margin-bottom: 30px;
+}
+
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 20px;
 }

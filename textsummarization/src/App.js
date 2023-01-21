@@ -6,10 +6,11 @@ import { useEffect, useState } from 'react';
 function App() {
 
   const [text, setText] = useState('')
+  const [summarizedtext, setsummarizedtext] = useState('')
 
   const configuration = new Configuration({
     // apiKey: process.env.OPENAI_API_KEY,
-    apiKey: 'apikey'
+    apiKey: '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'
   });
   const openai = new OpenAIApi(configuration);
 
@@ -25,7 +26,8 @@ function App() {
       temperature: 0.6,
       max_tokens: 100,
     }).then((res) => {
-      console.log(res, 'res')
+      console.log(res?.data?.choices[0]?.text, 'res')
+      setsummarizedtext(res?.data?.choices[0]?.text)
     })
     )
   }
@@ -72,40 +74,39 @@ function App() {
 
 
   return (
-    <div className="App">
+    <div className="App_">
+
+
+      <div className='header'  >
+        <h1>  Text Summarizer</h1>
+        <h2> Summarise your text into a shorter length.</h2>
+      </div>
 
 
 
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */}
+      <div className='container' >
+        <div className='text_form'  >
+          <form   >
+            <label>Enter your text</label>
+            <textarea rows={14} cols={80} placeholder='Put your text' value={text} onChange={(e) => setText(e.target.value)} />
 
-      <form onSubmit={HandleSubmit}  >
-
-        <textarea placeholder='Put your text' value={text} onChange={(e) => setText(e.target.value)} />
+          </form>
+        </div>
 
 
-
-        <button type='submit'   >Summarize</button>
-
-
-
-
-      </form>
+        <div>
+          <button type='button' onClick={HandleSubmit}  >Summarize</button>
+        </div>
 
 
+        <div className='summarized_text' >
+          <label>Summarized text</label>
+          <textarea placeholder='Summarized text' cols={80} rows={14} value={summarizedtext} onChange={(e) => setText(e.target.value)} />
 
+        </div>
+
+
+      </div>
     </div>
   );
 }
