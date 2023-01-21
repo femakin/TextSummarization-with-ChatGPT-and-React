@@ -78,7 +78,7 @@ function App() {
 
 
       <div className='header'  >
-        <h1>  Text Summarizer</h1>
+        <h1>Text  <span>Summarizer</span></h1>
         <h2> Summarise your text into a shorter length.</h2>
       </div>
 
