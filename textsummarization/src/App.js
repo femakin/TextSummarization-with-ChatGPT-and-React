@@ -10,7 +10,7 @@ function App() {
 
   const configuration = new Configuration({
     // apiKey: process.env.OPENAI_API_KEY,
-    apiKey: 'your_API_Key'
+    apiKey: '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'
   });
   const openai = new OpenAIApi(configuration);
 
