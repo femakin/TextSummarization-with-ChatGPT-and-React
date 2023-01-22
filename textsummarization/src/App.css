@@ -70,7 +70,7 @@
 
 textarea {
   width: 100%;
-  /* margin-top: 100px; */
+  margin-top: 10px;
 }
 
 #root {
@@ -89,4 +89,37 @@ textarea {
   align-items: center;
   flex-direction: column;
   margin-bottom: 20px;
+}
+
+.header_text {
+  font-size: 3.75rem;
+  line-height: 1;
+  color: #ffffff;
+}
+
+.text_active {
+  color: tomato;
+}
+
+.header_summary {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  color: #ffffff;
+}
+
+button {
+  padding: 0.75rem 2.5rem;
+  border-radius: 0.5rem;
+  border: #ffffff;
+  background: tomato;
+  color: #ffffff;
+}
+
+label {
+  color: #ffffff;
+  font-size: 1.2rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+
+
 }

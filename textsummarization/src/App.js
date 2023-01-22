@@ -10,7 +10,7 @@ function App() {
 
   const configuration = new Configuration({
     // apiKey: process.env.OPENAI_API_KEY,
-    apiKey: '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'
+    apiKey: 'your_API_Key'
   });
   const openai = new OpenAIApi(configuration);
 
@@ -68,7 +68,8 @@ function App() {
 
 
   function generatePrompt(text) {
-    return `Summarize this text into five lines  ${text}.`;
+    // return `Summarize this text into five lines  ${text}.`;
+    return `Summarize this text into five lines  ${text}. and break them into seperate lines`;
   }
 
 
@@ -78,8 +79,8 @@ function App() {
 
 
       <div className='header'  >
-        <h1>Text  <span>Summarizer</span></h1>
-        <h2> Summarise your text into a shorter length.</h2>
+        <h1 className='header_text' >Text  <span className='text_active'  >Summarizer</span></h1>
+        <h2 className='header_summary' > Summarise your text into a shorter length.</h2>
       </div>
 
 
