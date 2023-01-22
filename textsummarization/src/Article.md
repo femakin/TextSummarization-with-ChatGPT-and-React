@@ -86,6 +86,18 @@ for a free account. By following the instructions, you'll get to your Dashboard.
 - Click on your profile picture to view the menu bar, and then click View API Keys to proceed to the API Keys page.
 
 
+![View API Keys](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/e54ir0xbc933f5jy85a7.png)
+
+-  Click on Create new secret key to create a new API Key.
+
+
+![Create new secret key](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/hk4hbxy8gwgu8y165kla.png)
+
+- Copy the API Key and store it safely to use later in the tutorial.
+
+![API Key](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/zy086h404pnyjiw4cn5o.png)
+
+
 
 ## Installing dependencies such as the OpenAI API client library
 
