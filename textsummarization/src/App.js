@@ -35,7 +35,8 @@ function App() {
   };
 
   function generatePrompt(text) {
-    return `Summarize this in five lines ${text}. and break them into seperate lines`;
+    // return `Summarize this in five lines ${text}. and break them into seperate lines`;
+    return `Summarize this  ${text}. and break them into seperate lines`;
   }
 
   return (
